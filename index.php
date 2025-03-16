@@ -23,9 +23,9 @@
             <li><a href="qna.php">Q&A</a></li>
             <li><a href="kontakt.php">Kontakt</a></li>
 =======
-            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="portfolio.php">Portfólio</a></li>
             <li><a href="qna.php">Q&A</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="kontakt.php">Kontakt</a></li>
 >>>>>>> Stashed changes
         </ul>
         <a class="hamburger" id="hamburger">
