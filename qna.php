@@ -43,6 +43,10 @@
       <section class="container">
       <div class="accordion">
         <div class="question">Otázka 1</div>
+          <?php
+           include_once "functions.php";
+            generateSlides("img/banners");
+          ?>
         <div class="answer">Odpoveď 1</div>
       </div>
       <div class="accordion">
