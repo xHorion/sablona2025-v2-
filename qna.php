@@ -27,35 +27,31 @@
     </a>
   </nav>
 </header>
+  <?php
+  include_once "functions.php";
+  generateSlides("img/banners");
+  ?>
   <main>
-    <section class="banner">
-      <div class="container text-white">
-        <h1>Q&A</h1>
-      </div>
-    </section>
-    <section class="container">
-      <div class="row">
-        <div class="col-100 text-center">
-          <p><strong><em>Elit culpa id mollit irure sit. Ex ut et ea esse culpa officia ea incididunt elit velit veniam qui. Mollit deserunt culpa incididunt laborum commodo in culpa.</em></strong></p>
-        </div>
-      </div>
-    </section>
       <section class="container">
-      <div class="accordion">
-        <div class="question">Otázka 1</div>
-        <div class="answer">Odpoveď 1</div>
-      </div>
-      <div class="accordion">
-        <div class="question">Otázka 2</div>
-        <div class="answer">Odpoveď 2</div>
-      </div>
-      <div class="accordion">
-        <div class="question">Otázka 3</div>
-        <div class="answer">Odpoveď 3</div>
-      </div>
-    </section>
-    </section>
-  </div>
+          <?php
+          require_once "database.php";
+          require_once "includes/QnA.php";
+
+          $qna = new QnA($pdo);
+          $data = $qna->getAll();
+
+          if (!empty($data)) {
+              foreach ($data as $item) {
+                  echo '<div class="accordion">';
+                  echo '<div class="question">' . htmlspecialchars($item['Otazka']) . '</div>';
+                  echo '<div class="answer">' . htmlspecialchars($item['Odpoved']) . '</div>';
+                  echo '</div>';
+              }
+          } else {
+              echo "<p>Žiadne otázky a odpovede zatiaľ nie sú dostupné.</p>";
+          }
+          ?>
+      </section>
   </main>
   <footer class="container bg-dark text-white">
     <div class="row">

@@ -1,13 +1,13 @@
 <?php
 function generateSlides ($dir) {
-    $files glob (pattern: $dir. "/*.jpg");
+    $files = glob (pattern: $dir. "/*.jpg");
     $json = file_get_contents("data/datas.json");
     $data = json_decode($json, true);
     $text = $data["text_banner"];
 
     foreach ($files as $file) {
         echo '<div class="slide fade">';
-        echo '<img src="' $file. '">';
+        echo '<img src="' . $file. '">';
         echo '<div class="slide-text">'; 
         
         echo ($text[basename($file)]);
