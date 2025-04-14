@@ -18,15 +18,15 @@
       <nav class="main-nav">
         <ul class="main-menu" id="main-menu">
             <li><a href="index.html">Domov</a></li>
-<<<<<<< Updated upstream
+
             <li><a href="portfolio.php">Portfólio</a></li>
             <li><a href="qna.php">Q&A</a></li>
             <li><a href="kontakt.php">Kontakt</a></li>
-=======
+
             <li><a href="portfolio.php">Portfólio</a></li>
             <li><a href="qna.php">Q&A</a></li>
             <li><a href="kontakt.php">Kontakt</a></li>
->>>>>>> Stashed changes
+
         </ul>
         <a class="hamburger" id="hamburger">
             <i class="fa fa-bars"></i>
@@ -36,7 +36,6 @@
     
     <main>
       <section class="slides-container">
-<<<<<<< Updated upstream
           <div class="slide fade">
               <?php
                 include_once "functions.php";
@@ -47,14 +46,12 @@
                   Prvý nadpis
               </div>
           </div>
-=======
         <div class="slide fade">
           <img src="img/banner1.jpg">
           <div class="slide-text">
             Prvý nadpis
           </div>
         </div>
->>>>>>> Stashed changes
         
         <div class="slide fade">
           <img src="img/banner2.jpg">
