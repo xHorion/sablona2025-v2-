@@ -34,10 +34,11 @@
   <main>
       <section class="container">
           <?php
-          require_once "database.php";
-          require_once "includes/QnA.php";
+          require_once "classes/qna.php";
 
-          $qna = new QnA($pdo);
+          use qna_class\QnA;
+
+          $qna = new QnA();
           $data = $qna->getAll();
 
           if (!empty($data)) {
